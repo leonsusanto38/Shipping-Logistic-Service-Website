@@ -1,0 +1,41 @@
+.title {
+    font-weight: bold;
+    font-size: 24pt;
+    color: blue;
+}
+
+.subtitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    /* height: 100vh; */
+    /* background: #5bc0de; */
+    background-image: url("../assets/aboutus.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5%;
+    min-height: 58rem;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18pt;
+}
