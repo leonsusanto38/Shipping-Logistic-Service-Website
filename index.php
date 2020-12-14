@@ -673,7 +673,7 @@ require 'phps/connect.php';
 							<a href="#!">Shipping Rates</a>
 						</p>
 						<p>
-							<a href="#!">Help</a>
+							<a href="#!">Hel</a>
 						</p>
 
 					</div>
