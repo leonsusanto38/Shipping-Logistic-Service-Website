@@ -623,10 +623,16 @@ require 'phps/connect.php';
 							<a>Surabaya</a>
 						</p>
 						<p>
-							<a>Jakarta</a>
+							<a>Jogja</a>
 						</p>
 						<p>
 							<a>Bandung</a>
+						</p>
+						<p>
+							<a>Semarang</a>
+						</p>
+						<p>
+							<a>Jakarta</a>
 						</p>
 
 					</div>
