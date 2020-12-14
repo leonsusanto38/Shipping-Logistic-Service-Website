@@ -103,6 +103,7 @@ require 'phps/connect.php';
 	.button-primary {
 		position: relative;
 		background-color: #c0ca33;
+		background-color: orange;
 		color: #fff;
 		font-size: 1.8rem;
 		font-weight: 700;
@@ -111,7 +112,7 @@ require 'phps/connect.php';
 	}
 
 	.button-primary:hover {
-		color: #c0ca33;
+		color: orange;
 		text-decoration: none;
 	}
 
@@ -453,8 +454,8 @@ require 'phps/connect.php';
 	<header class="header-area overlay">
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
-				<a href="#" class="navbar-brand">ANDRECEPAT</a>
-
+				<!-- <a href="#" class="navbar-brand">ANDRECEPAT</a> -->
+				<img src="assets/logo.png" style="width: 20%">
 				<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
 					<span class="menu-icon-bar"></span>
 					<span class="menu-icon-bar"></span>
