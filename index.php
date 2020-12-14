@@ -617,11 +617,17 @@ require 'phps/connect.php';
 					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
 						<!-- Content -->
-						<h6 class="text-uppercase font-weight-bold">ANDRE CEPAT EXPRESS</h6>
+						<h6 class="text-uppercase font-weight-bold">Available at</h6>
 						<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-						<p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-							consectetur
-							adipisicing elit.</p>
+						<p>
+							<a>Surabaya</a>
+						</p>
+						<p>
+							<a>Jakarta</a>
+						</p>
+						<p>
+							<a>Bandung</a>
+						</p>
 
 					</div>
 					<!-- Grid column -->
@@ -673,7 +679,7 @@ require 'phps/connect.php';
 							<a href="#!">Shipping Rates</a>
 						</p>
 						<p>
-							<a href="#!">Hel</a>
+							<a href="#!">Help</a>
 						</p>
 
 					</div>
@@ -686,9 +692,9 @@ require 'phps/connect.php';
 						<h6 class="text-uppercase font-weight-bold">Contact Us</h6>
 						<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 						<p>
-							<i class="fas fa-home mr-3"></i>Universitas Kristen Petra</p>
+							<i class="fas fa-home mr-3"></i>Jl. Tomang Raya No. 11 Jakarta Barat</p>
 						<p>
-							<i class="fas fa-envelope mr-3"></i>info@example.com</p>
+							<i class="fas fa-envelope mr-3"></i>andrecepat@gmail.com</p>
 						<p>
 							<i class="fas fa-phone mr-3"></i>+ 01 234 567 88</p>
 						<p>
