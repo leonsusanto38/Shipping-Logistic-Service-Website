@@ -310,6 +310,28 @@ INSERT INTO `delivery_type` (`id`, `delivery_type_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `city`
+--
+
+CREATE TABLE `city` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `city`
+--
+
+INSERT INTO `city` (`id`, `name`) VALUES
+(1, 'Surabaya'),
+(2, 'Jakarta'),
+(3, 'Bandung');
+(4, 'Jogja');
+(5, 'Semarang');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `destination`
 --
 
@@ -339,7 +361,16 @@ INSERT INTO `destination` (`id`, `city_origin`, `city_destination`) VALUES
 (13, 'Jogjakarta', 'Surabaya'),
 (14, 'Jogjakarta', 'Jakarta'),
 (15, 'Jogjakarta', 'Semarang'),
-(16, 'Jogjakarta', 'Bandung');
+(16, 'Jogjakarta', 'Bandung'),
+(17, 'Semarang', 'Surabaya'),
+(18, 'Semarang', 'Jakarta'),
+(19, 'Semarang', 'Bandung'),
+(20, 'Semarang', 'Jogjakarta'),
+(21, 'Surabaya', 'Surabaya'),
+(22, 'Jakarta', 'Jakarta'),
+(23, 'Bandung', 'Bandung'),
+(24, 'Jogjakarta', 'Jogjakarta'),
+(25, 'Semarang', 'Semarang');
 
 -- --------------------------------------------------------
 
