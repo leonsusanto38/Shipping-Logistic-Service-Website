@@ -606,6 +606,22 @@ require 'phps/connect.php';
 			<div class="text-center py-5">
 				<img src="assets/peta.png">
 			</div>
+
+			<div class="text-center">
+				<div class="title py-3">
+				OUR PARTNER
+				</div>
+				<div class="row py-5">
+					<div class="col my-auto"><img src="assets/adidas.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/tokopedia.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/shopee.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/hm.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/padang.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/panasonic.png" style="width:60%"></div>
+					<div class="col my-auto"><img src="assets/cleo.png" style="width:60%"></div>
+				</div>
+			</div>
+
 		</section>
 
 		<!-- Footer -->
