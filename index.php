@@ -453,7 +453,7 @@ require 'phps/connect.php';
 	<header class="header-area overlay">
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
-				<a href="#" class="navbar-brand">ANDRECEPAT</a>
+				<a href="index.php" class="navbar-brand"><img src="assets/logo.png" alt="andrecepat" style="width:170px;"></a>
 
 				<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
 					<span class="menu-icon-bar"></span>
@@ -463,7 +463,7 @@ require 'phps/connect.php';
 
 				<div id="main-nav" class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">
-						<li><a href="#" class="nav-item nav-link">Home</a></li>
+						<li><a href="index.php" class="nav-item nav-link">Home</a></li>
 						<li><a href="#content" class="nav-item nav-link">About Us</a></li>
 						<li><a href="#services" class="nav-item nav-link">Services</a></li>
 						<li><a href="cekresi.php" class="nav-item nav-link">Cek Resi</a></li>
