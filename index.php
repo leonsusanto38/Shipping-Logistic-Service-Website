@@ -145,12 +145,12 @@ include 'header.php';
 					OUR PARTNER
 				</div>
 				<div class="row py-5">
-					<div class="col-md-2"><img src="assets/adidas.png" style="width:60%"></div>
-					<div class="col-md-2"><img src="assets/tokopedia.png" style="width:60%"></div>
-					<div class="col-md-2"><img src="assets/shopee.png" style="width:60%"></div>
-					<div class="col-md-2"><img src="assets/hm.png" style="width:60%"></div>
-					<div class="col-md-2"><img src="assets/padang.png" style="width:60%"></div>
-					<div class="col-md-2"><img src="assets/panasonic.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/adidas.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/tokopedia.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/shopee.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/hm.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/padang.png" style="width:60%"></div>
+					<div class="col-md-2 my-auto"><img src="assets/panasonic.png" style="width:60%"></div>
 				</div>
 			</div>
 
