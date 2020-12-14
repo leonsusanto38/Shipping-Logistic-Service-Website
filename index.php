@@ -603,6 +603,9 @@ require 'phps/connect.php';
 				</div>
 			</div>
 
+			<div class="text-center py-5">
+				<img src="assets/peta.png">
+			</div>
 		</section>
 
 		<!-- Footer -->
