@@ -1,5 +1,5 @@
 <?php
-require 'phps/connect.php';
+    require_once 'phps/connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ require 'phps/connect.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Cache-Control" content="no-store" />
 
     <meta name="description" content="Andre Cepat">
     <meta name="author" content="">
@@ -455,7 +455,141 @@ require 'phps/connect.php';
 </style>
 
 <script>
-    
+    function login() {
+        $.confirm({
+            title: 'LOGIN',
+            type: 'orange',
+            typeAnimated: true,
+            theme: 'modern',
+            columnClass: "col-md-5",
+            buttons: {
+                confirm: {
+                    text: 'LOGIN',
+                    btnClass: 'btn-green',
+                    action: function() {
+                        var username = this.$content.find('#username').val();
+                        var password = this.$content.find('#password').val();
+                        if (username && password) {
+                            $.ajax({
+                                url: "phps/ceklogin.php",
+                                method: "POST",
+                                data: {
+                                    username: username,
+                                    password: password
+                                },
+                                success: function(data) {
+                                    // alert(data);
+                                    if (data == 'true') {
+                                        window.location.href = "user.php";
+                                    } else {
+                                        $.alert('<b style="color: red;">Username atau Password salah!</b>');
+                                    }
+                                },
+                                error: function() {
+                                    alert('An error occurred.');
+                                },
+                            });
+                        } else {
+                            $.alert('<b style="color: red;">Username dan password harus diisi!</b>');
+                            return false;
+                        }
+                    }
+                },
+                cancel: {
+                    text: 'Cancel',
+                    btnClass: 'btn-red',
+                    action: function() {}
+                }
+            },
+            content: '' +
+                '<form id="myForm" enctype="multipart/form-data">' +
+                '<div class="form-group">' +
+                '<label for="username" style="font-size: 12pt;"><b>Username</b></label>' +
+                '<input type="text" class="form-control" id="username" name="username" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                '</div><br>' +
+                '<div class="form-group">' +
+                '<label for="password" style="font-size: 12pt;"><b>Password</b></label>' +
+                '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                '</div><br>' +
+                '<div class="form-group">' +
+                '<a onclick="signup()" style="cursor: pointer; color: blue; font-size: 12pt;"><b>I don\'t have an account</b></a>' +
+                '</div>' +
+                '</form>'
+        });
+    }
+
+    function signup() {
+        var x =
+            $.confirm({
+                title: 'SIGN UP',
+                type: 'orange',
+                typeAnimated: true,
+                theme: 'modern',
+                columnClass: "col-md-5",
+                lazyOpen: true,
+                buttons: {
+                    confirm: {
+                        text: 'Sign Up',
+                        btnClass: 'btn-green',
+                        action: function() {
+                            var username = this.$content.find('#username').val();
+                            var password = this.$content.find('#password').val();
+                            var email = this.$content.find('#email').val();
+                            if (username && password) {
+                                $.ajax({
+                                    url: "phps/signup.php",
+                                    method: "POST",
+                                    data: {
+                                        username: username,
+                                        password: password,
+                                        email: email
+                                    },
+                                    success: function(data) {
+                                        // $.alert(data);
+                                        if (data == 'true') {
+                                            window.location.href = "user.php";
+                                        } else if (data == 'falseusername') {
+                                            $.alert('<b style="color: red;">Mohon maaf, username telah terdaftar!</b>');
+                                            signup();
+                                        } else {
+                                            $.alert('<b style="color: red;">Mohon maaf, email telah terdaftar!</b>');
+                                            signup();
+                                        }
+                                    },
+                                    error: function() {
+                                        alert('An error occurred.');
+                                    },
+                                });
+                            } else {
+                                $.alert('<b style="color: red;">Tolong isi semua kolom yang tersedia!</b>');
+                                return false;
+                            }
+                        }
+                    },
+                    cancel: {
+                        text: 'Cancel',
+                        btnClass: 'btn-red',
+                        action: function() {}
+                    }
+                },
+                content: '' +
+                    '<form id="myForm" enctype="multipart/form-data">' +
+                    '<div class="form-group">' +
+                    '<label for="username" style="font-size: 12pt;"><b>New Username</b></label>' +
+                    '<input type="text" class="form-control" id="username" name="username" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                    '</div><br>' +
+                    '<div class="form-group">' +
+                    '<label for="password" style="font-size: 12pt;"><b>New Password</b></label>' +
+                    '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                    '</div><br>' +
+                    '<div class="form-group">' +
+                    '<label for="email" style="font-size: 12pt;"><b>E-mail</b></label>' +
+                    '<input type="email" class="form-control" id="email" name="email" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                    '</div>' +
+                    '</form>'
+            });
+        x.open();
+    }
 </script>
 
 <body>
@@ -478,7 +612,13 @@ require 'phps/connect.php';
                         <li><a href="cekresi.php" class="nav-item nav-link">Cek Resi</a></li>
                         <li><a href="cekongkir.php" class="nav-item nav-link">Cek Ongkir</a></li>
                         <li><a href="#contactus" class="nav-item nav-link">Contact Us</a></li>
-                        <li><a onclick="" class="btn btn-info">Login</a></li>
+
+                        <?php if (!isset($_SESSION['username'])) {
+                            echo '<li><a onclick="login()" class="nav-item nav-link" style="cursor: pointer;">Login</a></li>';
+                        } else {
+                            echo '<li><a href="user.php" class="nav-item nav-link" style="cursor: pointer;">Pick Up Request</a></li><li><a href="phps/logout.php" class="nav-item nav-link" style="cursor: pointer;">Log Out</a></li>';
+                        } ?>
+
                     </ul>
                 </div>
             </div>

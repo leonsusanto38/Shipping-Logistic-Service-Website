@@ -1,5 +1,4 @@
 <?php
-require 'phps/connect.php';
 include 'header.php';
 ?>
 
