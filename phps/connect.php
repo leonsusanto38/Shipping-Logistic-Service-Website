@@ -17,5 +17,5 @@
         throw \PDOException($e->getMessage(), $e->getCode());
     }
 
-    //session_start();
+    session_start();
 ?>

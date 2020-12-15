@@ -1,5 +1,4 @@
 <?php
-require 'phps/connect.php';
 include 'header.php';
 ?>
 
@@ -38,14 +37,14 @@ include 'header.php';
                                     layanan: layanan
                                 },
                                 success: function(data) {
-                                    $.alert("<center>Biaya ongkos kirim untuk kota asal <b>" + asal + "</b> dan kota tujuan <b>" + tujuan + "</b> dengan kategori berat barang <b>" + kategori + " kg</b> untuk layanan <b>" + layanan + "</b> adalah sebesar<br><span style='font-weight: bold; font-size: 24pt;'>Rp" + data + "</span></center>");
+                                    $.alert("<center>Biaya ongkos kirim untuk kota asal <b>" + asal + "</b> dan kota tujuan <b>" + tujuan + "</b> dengan kategori berat barang <b>" + kategori + " kg</b> untuk jenis layanan <b>" + layanan + "</b> adalah sebesar<br><span style='font-weight: bold; font-size: 24pt;'>Rp" + data + "</span></center>");
                                 },
                                 error: function(data) {
                                     alert('An error occurred.');
                                 },
                             });
                         } else {
-                            $.alert('<b style="color: red;">Tidak boleh ada yang kosong!</b>');
+                            $.alert('<b style="color: red;">Silahkan mengisi semua kolom yang tersedia!</b>');
                             return false;
                         }
                     }
