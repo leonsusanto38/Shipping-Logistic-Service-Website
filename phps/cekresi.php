@@ -8,9 +8,6 @@
         $cekresi = $cekresistmt->fetch();
 
         if ($cekresi['x'] == 1) {
-            if (isset($_SESSION['cekresi'])) {
-                unset($_SESSION['cekresi']);
-            }
             $_SESSION['cekresi'] = $_POST['resi'];
             echo "true";
         } else {

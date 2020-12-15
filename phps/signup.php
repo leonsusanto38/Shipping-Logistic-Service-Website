@@ -17,8 +17,8 @@
             $registerstmt = $pdo->prepare($registersql);
             $registerstmt->execute(['', $_POST['username'], $_POST['password'], $_POST['email']]);
 
-            echo "true";
             $_SESSION['username'] = $_POST['username'];
+            echo "true";
         }
         else if ($cekregisteredusername['x'] != 0) {
             echo "falseusername"; 

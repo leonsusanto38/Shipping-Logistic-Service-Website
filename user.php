@@ -20,7 +20,7 @@ if (isset($_SESSION['resi'])) {
 </head>
 
 <script>
-    function success() {
+    function successPickUp() {
         $.confirm({
             title: 'SUCCESS!',
             type: 'green',
@@ -38,11 +38,37 @@ if (isset($_SESSION['resi'])) {
     }
 </script>
 
+<script>
+    function successRegister() {
+        $.confirm({
+            title: 'Successfully Registered!',
+            type: 'green',
+            typeAnimated: true,
+            theme: 'modern',
+            buttons: {
+                cancel: {
+                    text: 'CLOSE',
+                    btnClass: 'btn-red',
+                    action: function() {}
+                }
+            },
+            content: "Selamat datang <b>" + "<?php echo $_SESSION['username']; ?>" + "</b> di Andre Cepat Express! Sekarang Anda bisa melakukan <i>Request Pick Up</i> di halaman <i>Pick Up Request</i>."
+        });
+    }
+</script>
+
 <?php
 if (isset($_GET['status'])) {
+    //sukses melakukan pick up request
     if ($_GET['status'] == 1) {
         echo '<script type="text/javascript">',
-            'success();',
+            'successPickUp();',
+            '</script>';
+    }
+    //sukses melakukan register
+    if ($_GET['status'] == 2) {
+        echo '<script type="text/javascript">',
+            'successRegister();',
             '</script>';
     }
 }

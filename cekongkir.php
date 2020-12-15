@@ -19,7 +19,7 @@ include 'header.php';
             columnClass: "col-md-5",
             buttons: {
                 confirm: {
-                    text: 'Cek Harga',
+                    text: 'Cek Ongkir',
                     btnClass: 'btn-green',
                     action: function() {
                         var asal = this.$content.find('#asal').val();
@@ -92,7 +92,7 @@ include 'header.php';
                 '<div class="form-group">' +
                 '<label for="layanan" style="font-size: 12pt;"><b>Jenis Layanan</b></label>' +
                 '</center><select class="form-control" id="layanan" style="height:40px; font-size: 12pt;">' +
-                '<option value="">Pilih layanan</option>' +
+                '<option value="">Pilih jenis layanan</option>' +
                 '<option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>' +
                 '<option value="ANDRE REGULAR">ANDRE REGULAR</option>' +
                 '<option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>' +

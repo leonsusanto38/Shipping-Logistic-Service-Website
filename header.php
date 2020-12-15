@@ -1,5 +1,5 @@
 <?php
-    require_once 'phps/connect.php';
+require_once 'phps/connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -547,7 +547,7 @@
                                     success: function(data) {
                                         // $.alert(data);
                                         if (data == 'true') {
-                                            window.location.href = "user.php";
+                                            window.location.href = "user.php?status=2";
                                         } else if (data == 'falseusername') {
                                             $.alert('<b style="color: red;">Mohon maaf, username telah terdaftar!</b>');
                                             signup();
@@ -607,8 +607,8 @@
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li><a href="index.php" class="nav-item nav-link">Home</a></li>
-                        <li><a href="#content" class="nav-item nav-link">About Us</a></li>
-                        <li><a href="#services" class="nav-item nav-link">Services</a></li>
+                        <li><a href="index.php#content" class="nav-item nav-link">About Us</a></li>
+                        <li><a href="index.php#services" class="nav-item nav-link">Services</a></li>
                         <li><a href="cekresi.php" class="nav-item nav-link">Cek Resi</a></li>
                         <li><a href="cekongkir.php" class="nav-item nav-link">Cek Ongkir</a></li>
                         <li><a href="#contactus" class="nav-item nav-link">Contact Us</a></li>
