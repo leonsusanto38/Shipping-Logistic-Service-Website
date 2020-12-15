@@ -28,6 +28,16 @@ include 'header.php';
         show();
     });
 
+    function Search(table) {
+        $("#filterstatus").on("change", function() {
+            table.columns(2).search(this.value).draw();
+        });
+
+        $("#filterservice").on("change", function() {
+            table.columns(3).search(this.value).draw();
+        });
+    }
+
     var ajaxcall;
 
     function show() {
@@ -63,11 +73,12 @@ include 'header.php';
                     num = num + 1;
                 }
                 dataDiv.html(str);
-                $('#historyTable').dataTable({
+                var table = $('#historyTable').DataTable({
                     "oLanguage": {
-                        "sEmptyTable": "Belum ada history Pick Up Request!"
+                        "sEmptyTable": "Anda belum pernah melakukan Request Pick Up!"
                     }
                 });
+                Search(table);
             },
             error: function(result) {
                 //Error handling
@@ -87,7 +98,31 @@ include 'header.php';
                 <h3 class="title">
                     PICK UP HISTORY
                 </h3>
-            </div>
+            </div><br>
+
+            <center>
+                    <div>
+                        <select class="form-control" id="filterstatus" style="width: 60%; height:40px; font-size: 12pt;">
+                            <option value="">Lihat berdasarkan status</option>
+                            <option value="PICKREQ">PICKREQ</option>
+                            <option value="PICK">PICK</option>
+                            <option value="ON TRANSIT">ON TRANSIT</option>
+                            <option value="ON DELIVERY">ON DELIVERY</option>
+                            <option value="DELIVERED">DELIVERED</option>
+        
+                        </select>
+                    </div>
+                </center><br>
+                <center>
+                    <div>
+                        <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
+                            <option value="">Lihat berdasarkan service</option>
+                            <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
+                            <option value="ANDRE REGULAR">ANDRE REGULAR</option>
+                            <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
+                        </select>
+                    </div>
+            </center>
 
             <div class="row" style="margin-top: 20px;overflow-x: auto;">
                 <div class="col-12">
