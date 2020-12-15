@@ -1,6 +1,11 @@
 <?php
 include 'header.php';
 
+// if (!isset($_SESSION['username']) || $_SESSION['username'] == 'admin') {
+//     header("Location: index.php");
+//     exit();
+// }
+
 if (isset($_SESSION['resi'])) {
     $resi = $_SESSION['resi'];
 
@@ -16,7 +21,7 @@ if (isset($_SESSION['resi'])) {
 <html lang="en">
 
 <head>
-    <title>Welcome, <?php echo $_SESSION['username'] ?></title>
+    <title>Halo, <?php echo $_SESSION['username'] ?>!</title>
 </head>
 
 <script>
@@ -78,7 +83,8 @@ if (isset($_GET['status'])) {
     <div class="container">
         <h1>Welcome, <?php echo $_SESSION['username'] ?>!</h1>
         <p>Express your online business!</p>
-        <a href="#content" class="button button-primary">Request Pick Up</a>
+        <a href="#content" class="button button-primary">Request Pick Up</a><br>
+        <a href="history.php" class="button button-primary-history">Pick Up History</a>
     </div>
 </div>
 </header>

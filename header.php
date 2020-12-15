@@ -14,7 +14,7 @@ require_once 'phps/connect.php';
     <meta name="author" content="">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> -->
 
-    <title>Andre Cepat Express</title>
+    <!-- <title>Andre Cepat Express</title> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -33,6 +33,11 @@ require_once 'phps/connect.php';
     <!-- jquery confirm -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+    <!-- data table -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    </script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
 </head>
 
 <script>
@@ -106,7 +111,7 @@ require_once 'phps/connect.php';
 
     .button-primary {
         position: relative;
-        background-color: #c0ca33;
+        /* background-color: #c0ca33; */
         background-color: orange;
         color: #fff;
         font-size: 1.8rem;
@@ -138,6 +143,45 @@ require_once 'phps/connect.php';
     }
 
     .button-primary:hover::after {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    .button-primary-history {
+        position: relative;
+        background-color: #35db35;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        transition: color 0.3s ease-in;
+        z-index: 1;
+    }
+
+    .button-primary-history:hover {
+        color: #35db35;
+        text-decoration: none;
+    }
+
+    .button-primary-history::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        border-radius: 4px;
+        opacity: 0;
+        -webkit-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
+        transform: scaleX(0.8);
+        transition: all 0.3s ease-in;
+        z-index: -1;
+    }
+
+    .button-primary-history:hover::after {
         opacity: 1;
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
@@ -481,6 +525,8 @@ require_once 'phps/connect.php';
                                     // alert(data);
                                     if (data == 'true') {
                                         window.location.href = "user.php";
+                                    } else if (data == 'admin') {
+                                        window.location.href = "admin.php";
                                     } else {
                                         $.alert('<b style="color: red;">Username atau Password salah!</b>');
                                     }
@@ -616,7 +662,13 @@ require_once 'phps/connect.php';
                         <?php if (!isset($_SESSION['username'])) {
                             echo '<li><a onclick="login()" class="nav-item nav-link" style="cursor: pointer;">Login</a></li>';
                         } else {
-                            echo '<li><a href="user.php" class="nav-item nav-link" style="cursor: pointer;">Pick Up Request</a></li><li><a href="phps/logout.php" class="nav-item nav-link" style="cursor: pointer;">Log Out</a></li>';
+                            if ($_SESSION['username'] == 'admin') {
+                                echo '<li><a href="admin.php" class="nav-item nav-link" style="cursor: pointer;">Pick Up Request</a></li>';
+                            }
+                            else {
+                                echo '<li><a href="user.php" class="nav-item nav-link" style="cursor: pointer;">Request Pick Up</a></li>';
+                            }
+                            echo '<li><a href="phps/logout.php" class="nav-item nav-link" style="cursor: pointer;">Log Out</a></li>';
                         } ?>
 
                     </ul>
