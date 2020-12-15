@@ -558,7 +558,7 @@ require_once 'phps/connect.php';
                 '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
                 '</div><br>' +
                 '<div class="form-group">' +
-                '<a onclick="signup()" style="cursor: pointer; color: blue; font-size: 12pt;"><b>I don\'t have an account</b></a>' +
+                '<a onclick="signup()" style="cursor: pointer; color: blue; font-size: 12pt;"><b>Belum memiliki akun?</b></a>' +
                 '</div>' +
                 '</form>'
         });
