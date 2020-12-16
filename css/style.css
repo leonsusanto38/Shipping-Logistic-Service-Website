@@ -40,8 +40,13 @@
     font-size: 18pt;
 }
 
-.kritiksaran:hover {
-    color: orange;
+.koandre {
+    transition: 1s;
+}
+
+.koandre:hover {
+    transition: 1s;
+    transform: scale(1.2);
 }
 
 body {

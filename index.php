@@ -18,6 +18,17 @@ include 'header.php';
 </div>
 </header>
 
+<style>
+	.koandre {
+		transition: 1s;
+	}
+
+	.koandre:hover {
+		transition: 1s;
+		transform: scale(1.1);
+	}
+</style>
+
 <main>
 	<section id="content" class="content">
 
@@ -44,6 +55,8 @@ include 'header.php';
 				</div>
 			</div>
 		</div>
+
+		<br>
 
 		<div class="container mt-5" id="services">
 
@@ -140,13 +153,29 @@ include 'header.php';
 
 		<div class="row justify-content-center">
 			<h3 class="title">
+				CHIEF EXECUTIVE OFFICER
+			</h3><br>
+		</div>
+		<div class="text-center py-5">
+			<a href="https://www.instagram.com/andregunawan95/" style="text-decoration: none; color: black;" target="_blank">
+				<img class="koandre" src="assets/koandre.png"><br><br>
+				<h3 style="font-weight: bold; font-size: 20pt;">
+					&#128150; KO ANDRE GUNAWAN &#128150;
+				</h3><br>
+			</a>
+		</div>
+
+		<br><br>
+
+		<div class="row justify-content-center">
+			<h3 class="title">
 				OUR COVERAGE AREA
 			</h3>
 		</div>
 		<div class="text-center py-5">
 			<img src="assets/peta.png">
 		</div>
-		<br>
+		<br><br>
 		<div class="text-center">
 			<div class="title py-3">
 				OUR PARTNER
