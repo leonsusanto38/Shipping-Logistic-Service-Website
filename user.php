@@ -206,9 +206,9 @@ if (isset($_GET['status'])) {
                                 <label for="layanan">Jenis Layanan</label>
                                 <select class="form-control" name="layanan" id="layanan" style="height:40px; font-size: 12pt;" required>
                                     <option value="">Pilih jenis layanan</option>
-                                    <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
-                                    <option value="ANDRE REGULAR">ANDRE REGULAR</option>
-                                    <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
+                                    <option value="ANDRE EKONOMIS">ANDRE EKONOMIS &#128178;</option>
+                                    <option value="ANDRE REGULAR">ANDRE REGULAR &#128666;</option>
+                                    <option value="ANDRE HALILINTAR">ANDRE HALILINTAR &#x26a1;</option>
                                 </select>
                             </div>
                         </div>

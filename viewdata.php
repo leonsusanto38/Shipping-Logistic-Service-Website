@@ -33,7 +33,7 @@ if (isset($_GET['resi'])) {
 <div class="banner">
     <div class="container">
         <h1>RESI <?php echo $cekdelivery['resi']; ?></h1>
-        <p>Express your online business!</p>
+        <p>Yeahh!</p>
         <a href="#content" class="button button-primary">View Data</a><br>
     </div>
 </div>

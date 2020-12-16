@@ -23,7 +23,7 @@ include 'header.php';
 <div class="banner">
     <div class="container">
         <h1>PICK UP HISTORY</h1>
-        <p>Begin your journey with the castle of history</p>
+        <p>Once upon a time at Andre Cepat Express...</p>
         <a href="#content" class="button button-primary">View Pick Up History</a>
     </div>
 </div>

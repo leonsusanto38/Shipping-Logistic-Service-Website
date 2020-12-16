@@ -18,7 +18,7 @@ include 'header.php';
 <script>
     function cekongkir() {
         $.confirm({
-            title: 'Cek Ongkir <i class="fas fa-truck"></i>',
+            title: 'Cek Ongkir <i class="fas fa-shipping-fast"></i>',
             type: 'orange',
             typeAnimated: true,
             theme: 'modern',
@@ -64,7 +64,7 @@ include 'header.php';
             content: '' +
                 '<form id="myForm" enctype="multipart/form-data">' +
                 '<div class="form-group">' +
-                '<label for="asal" style="font-size: 12pt;"><b>Kota Asal</b></label>' +
+                '<label for="asal" style="font-size: 12pt;"><b>Kota Asal <i class="fas fa-city"></i></b></label>' +
                 '</center><select class="form-control" id="asal" style="height:40px; font-size: 12pt;">' +
                 '<option value="">Pilih kota asal</option>' +
                 '<option value="Surabaya">Surabaya</option>' +
@@ -75,7 +75,7 @@ include 'header.php';
                 '</select>' +
                 '</div><br>' +
                 '<div class="form-group">' +
-                '<label for="tujuan" style="font-size: 12pt;"><b>Kota Tujuan</b></label>' +
+                '<label for="tujuan" style="font-size: 12pt;"><b>Kota Tujuan <i class="fas fa-plane-departure"></i></b></label>' +
                 '</center><select class="form-control" id="tujuan" style="height:40px; font-size: 12pt;">' +
                 '<option value="">Pilih kota tujuan</option>' +
                 '<option value="Surabaya">Surabaya</option>' +
@@ -86,7 +86,7 @@ include 'header.php';
                 '</select>' +
                 '</div><br>' +
                 '<div class="form-group">' +
-                '<label for="kategori" style="font-size: 12pt;"><b>Kategori Berat Barang (kg)</b></label>' +
+                '<label for="kategori" style="font-size: 12pt;"><b>Kategori Berat Barang (kg) <i class="fas fa-weight"></i></b></label>' +
                 '</center><select class="form-control" id="kategori" style="height:40px; font-size: 12pt;">' +
                 '<option value="">Pilih kategori berat barang</option>' +
                 '<option value="1-5">1-5 kg</option>' +
@@ -96,12 +96,12 @@ include 'header.php';
                 '</select>' +
                 '</div><br>' +
                 '<div class="form-group">' +
-                '<label for="layanan" style="font-size: 12pt;"><b>Jenis Layanan</b></label>' +
+                '<label for="layanan" style="font-size: 12pt;"><b>Jenis Layanan <i class="fas fa-truck-loading"></i></b></label>' +
                 '</center><select class="form-control" id="layanan" style="height:40px; font-size: 12pt;">' +
                 '<option value="">Pilih jenis layanan</option>' +
-                '<option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>' +
-                '<option value="ANDRE REGULAR">ANDRE REGULAR</option>' +
-                '<option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>' +
+                '<option value="ANDRE EKONOMIS">ANDRE EKONOMIS &#128178;</option>' +
+                '<option value="ANDRE REGULAR">ANDRE REGULAR &#128666;</option>' +
+                '<option value="ANDRE HALILINTAR">ANDRE HALILINTAR &#x26a1;</option>' +
                 '</select>' +
                 '</div><br>' +
                 '</form>'
@@ -112,7 +112,7 @@ include 'header.php';
 <div class="banner" style="background-image: url('assets/cekongkir.png');">
     <div class="container">
         <h1>CEK ONGKIR</h1>
-        <p>Your package, our passion</p>
+        <p>Your package, our passion!</p>
         <button class="button button-primary" style="border: 0" onclick="cekongkir()">Click Here</button>
     </div>
 </div>

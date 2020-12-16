@@ -17,7 +17,7 @@ include 'header.php';
 <div class="banner">
     <div class="container">
         <h1>ADMIN</h1>
-        <p>You've got to love what you do to really make things happen</p>
+        <p>You've got to love what you do to really make things happen!</p>
         <a href="#content" class="button button-primary">View Pick Up Request</a>
     </div>
 </div>

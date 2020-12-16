@@ -500,74 +500,77 @@ require_once 'phps/connect.php';
 
 <script>
     function login() {
-        $.confirm({
-            title: 'LOGIN',
-            type: 'orange',
-            typeAnimated: true,
-            theme: 'modern',
-            columnClass: "col-md-5",
-            buttons: {
-                confirm: {
-                    text: 'LOGIN',
-                    btnClass: 'btn-green',
-                    action: function() {
-                        var username = this.$content.find('#username').val();
-                        var password = this.$content.find('#password').val();
-                        if (username && password) {
-                            $.ajax({
-                                url: "phps/ceklogin.php",
-                                method: "POST",
-                                data: {
-                                    username: username,
-                                    password: password
-                                },
-                                success: function(data) {
-                                    // alert(data);
-                                    if (data == 'true') {
-                                        window.location.href = "user.php";
-                                    } else if (data == 'admin') {
-                                        window.location.href = "admin.php";
-                                    } else {
-                                        $.alert('<b style="color: red;">Username atau Password salah!</b>');
-                                    }
-                                },
-                                error: function() {
-                                    alert('An error occurred.');
-                                },
-                            });
-                        } else {
-                            $.alert('<b style="color: red;">Username dan password harus diisi!</b>');
-                            return false;
+        var x =
+            $.confirm({
+                title: 'LOGIN <i class="fas fa-sign-in-alt"></i>',
+                type: 'orange',
+                typeAnimated: true,
+                theme: 'modern',
+                columnClass: "col-md-5",
+                buttons: {
+                    confirm: {
+                        text: 'LOGIN',
+                        btnClass: 'btn-green',
+                        action: function() {
+                            var username = this.$content.find('#username').val();
+                            var password = this.$content.find('#password').val();
+                            if (username && password) {
+                                $.ajax({
+                                    url: "phps/ceklogin.php",
+                                    method: "POST",
+                                    data: {
+                                        username: username,
+                                        password: password
+                                    },
+                                    success: function(data) {
+                                        // alert(data);
+                                        if (data == 'true') {
+                                            window.location.href = "user.php";
+                                        } else if (data == 'admin') {
+                                            window.location.href = "admin.php";
+                                        } else {
+                                            $.alert('<b style="color: red;">Username atau Password Anda salah!</b>');
+                                            login();
+                                        }
+                                    },
+                                    error: function() {
+                                        alert('An error occurred.');
+                                    },
+                                });
+                            } else {
+                                $.alert('<b style="color: red;">Username dan Password harus diisi!</b>');
+                                return false;
+                            }
                         }
+                    },
+                    cancel: {
+                        text: 'Cancel',
+                        btnClass: 'btn-red',
+                        action: function() {}
                     }
                 },
-                cancel: {
-                    text: 'Cancel',
-                    btnClass: 'btn-red',
-                    action: function() {}
-                }
-            },
-            content: '' +
-                '<form id="myForm" enctype="multipart/form-data">' +
-                '<div class="form-group">' +
-                '<label for="username" style="font-size: 12pt;"><b>Username</b></label>' +
-                '<input type="text" class="form-control" id="username" name="username" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
-                '</div><br>' +
-                '<div class="form-group">' +
-                '<label for="password" style="font-size: 12pt;"><b>Password</b></label>' +
-                '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
-                '</div><br>' +
-                '<div class="form-group">' +
-                '<a onclick="signup()" style="cursor: pointer; color: blue; font-size: 12pt;"><b>Belum memiliki akun?</b></a>' +
-                '</div>' +
-                '</form>'
-        });
+                content: '' +
+                    '<form id="myForm" enctype="multipart/form-data">' +
+                    '<div class="form-group">' +
+                    '<label for="username" style="font-size: 12pt;"><b>Username <i class="fas fa-user-tag"></i></b></label>' +
+                    '<input type="text" class="form-control" id="username" name="username" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                    '</div><br>' +
+                    '<div class="form-group">' +
+                    '<label for="password" style="font-size: 12pt;"><b>Password <i class="fas fa-key"></i></b></label>' +
+                    '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
+                    '</div><br>' +
+                    '<div class="form-group">' +
+                    '<a onclick="signup()" style="cursor: pointer; color: blue; font-size: 12pt;"><b>Belum memiliki akun? Daftar sekarang!</b></a>' +
+                    '</div>' +
+                    '</form>'
+            });
+        x.open();
     }
 
     function signup() {
         var x =
             $.confirm({
-                title: 'SIGN UP',
+                title: 'SIGN UP <i class="fas fa-user-plus"></i>',
                 type: 'orange',
                 typeAnimated: true,
                 theme: 'modern',
@@ -598,7 +601,7 @@ require_once 'phps/connect.php';
                                             $.alert('<b style="color: red;">Mohon maaf, username telah terdaftar!</b>');
                                             signup();
                                         } else {
-                                            $.alert('<b style="color: red;">Mohon maaf, email telah terdaftar!</b>');
+                                            $.alert('<b style="color: red;">Mohon maaf, e-mail telah terdaftar!</b>');
                                             signup();
                                         }
                                     },
@@ -607,7 +610,7 @@ require_once 'phps/connect.php';
                                     },
                                 });
                             } else {
-                                $.alert('<b style="color: red;">Tolong isi semua kolom yang tersedia!</b>');
+                                $.alert('<b style="color: red;">Silahkan isi semua kolom yang tersedia!</b>');
                                 return false;
                             }
                         }
@@ -621,15 +624,15 @@ require_once 'phps/connect.php';
                 content: '' +
                     '<form id="myForm" enctype="multipart/form-data">' +
                     '<div class="form-group">' +
-                    '<label for="username" style="font-size: 12pt;"><b>New Username</b></label>' +
+                    '<label for="username" style="font-size: 12pt;"><b>New Username <i class="fas fa-user-tag"></i></b></label>' +
                     '<input type="text" class="form-control" id="username" name="username" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
                     '</div><br>' +
                     '<div class="form-group">' +
-                    '<label for="password" style="font-size: 12pt;"><b>New Password</b></label>' +
+                    '<label for="password" style="font-size: 12pt;"><b>New Password <i class="fas fa-key"></i></b></label>' +
                     '<input type="password" class="form-control" id="password" name="password" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
                     '</div><br>' +
                     '<div class="form-group">' +
-                    '<label for="email" style="font-size: 12pt;"><b>E-mail</b></label>' +
+                    '<label for="email" style="font-size: 12pt;"><b>E-mail <i class="fas fa-envelope"></i></b></label>' +
                     '<input type="email" class="form-control" id="email" name="email" style="font-size: 14pt; height: 40px; text-align: center;" required>' +
                     '</div>' +
                     '</form>'
@@ -664,8 +667,7 @@ require_once 'phps/connect.php';
                         } else {
                             if ($_SESSION['username'] == 'admin') {
                                 echo '<li><a href="admin.php" class="nav-item nav-link" style="cursor: pointer;">Pick Up Request</a></li>';
-                            }
-                            else {
+                            } else {
                                 echo '<li><a href="user.php" class="nav-item nav-link" style="cursor: pointer;">Request Pick Up</a></li>';
                             }
                             echo '<li><a href="phps/logout.php" class="nav-item nav-link" style="cursor: pointer;">Log Out</a></li>';
