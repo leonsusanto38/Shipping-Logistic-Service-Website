@@ -24,6 +24,12 @@ if (isset($_SESSION['resi'])) {
     <title>Halo, <?php echo $_SESSION['username'] ?>!</title>
 </head>
 
+<style>
+    .header-area {
+        background-image: url("assets/useradmin.jpg");
+    }
+</style>
+
 <script>
     function successPickUp() {
         $.confirm({
@@ -271,7 +277,7 @@ if (isset($_GET['status'])) {
                     <br>
 
                     <center>
-                        <button style="font-weight: bold; height:40px; font-size: 12pt;" type="submit" class="btn btn-warning">Request Pick Up</button>
+                        <button style="border-radius: 5px; font-weight: bold; height:40px; font-size: 12pt;" type="submit" class="btn btn-warning">Request Pick Up</button>
                     </center>
 
                 </div>

@@ -24,6 +24,12 @@ if (isset($_GET['resi'])) {
     <title>Resi <?php echo $cekdelivery['resi']; ?></title>
 </head>
 
+<style>
+    .header-area {
+        background-image: url("assets/viewdata.jpg");
+    }
+</style>
+
 <div class="banner">
     <div class="container">
         <h1>RESI <?php echo $cekdelivery['resi']; ?></h1>
@@ -55,13 +61,13 @@ if (isset($_GET['resi'])) {
                         <div class="col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label for="namasender">Nama</label>
-                                <input type="text" class="form-control" id="namasender" name="namasender" placeholder="Masukkan nama pengirim" style="height:40px; font-size: 12pt;" value ="<?php echo $cekdelivery['sender_name']; ?>" readonly>
+                                <input type="text" class="form-control" id="namasender" name="namasender" placeholder="Masukkan nama pengirim" style="height:40px; font-size: 12pt;" value="<?php echo $cekdelivery['sender_name']; ?>" readonly>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label for="hpsender">Nomor HP</label>
-                                <input type="number" class="form-control" id="hpsender" name="hpsender" placeholder="Ex: 08123456789" style="height:40px; font-size: 12pt;" value ="<?php echo $cekdelivery['sender_phone_number']; ?>" readonly>
+                                <input type="number" class="form-control" id="hpsender" name="hpsender" placeholder="Ex: 08123456789" style="height:40px; font-size: 12pt;" value="<?php echo $cekdelivery['sender_phone_number']; ?>" readonly>
                             </div>
                         </div>
                     </div>
@@ -191,14 +197,13 @@ if (isset($_GET['resi'])) {
 
                     <center>
                         <?php
-                            if (isset($_SESSION['username'])) {
-                                if ($_SESSION['username'] == 'admin') {
-                                    echo "<a href='admin.php#content' class='button button-primary'>Back</a><br>";
-                                }
-                                else {
-                                    echo "<a href='history.php#content' class='button button-primary'>Back</a><br>";
-                                }
+                        if (isset($_SESSION['username'])) {
+                            if ($_SESSION['username'] == 'admin') {
+                                echo "<a href='admin.php#content' class='button button-primary'>Back</a><br>";
+                            } else {
+                                echo "<a href='history.php#content' class='button button-primary'>Back</a><br>";
                             }
+                        }
                         ?>
                     </center>
 

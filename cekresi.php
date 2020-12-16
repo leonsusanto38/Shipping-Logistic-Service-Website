@@ -9,6 +9,12 @@ include 'header.php';
     <title>Cek Resi</title>
 </head>
 
+<style>
+    .header-area {
+        background-image: url("assets/cekresi.jpg");
+    }
+</style>
+
 <script>
     function cekresi() {
         $.confirm({

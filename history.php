@@ -14,6 +14,12 @@ include 'header.php';
     <title>Pick Up History</title>
 </head>
 
+<style>
+    .header-area {
+        background-image: url("assets/history.jpg");
+    }
+</style>
+
 <div class="banner">
     <div class="container">
         <h1>PICK UP HISTORY</h1>
@@ -63,7 +69,11 @@ include 'header.php';
                     str += "<tr style='font-weight: 100;'>";
                     str += "<td>" + num + "</td>";
                     str += "<td>" + d.resi + "</td>";
-                    str += "<td>" + d.delivery_status + "</td>";
+                    if (d.delivery_status == 'DELIVERED') {
+                        str += "<td style='font-weight: bold; color: #fc6203;'>" + d.delivery_status + "</td>";
+                    } else {
+                        str += "<td>" + d.delivery_status + "</td>";
+                    }
                     str += "<td>" + d.delivery_type + "</td>";
                     str += "<td>" + d.delivery_date + "</td>";
                     str += "<td>" + d.sender_name + ", " + d.sender_origin_city + "</td>";
@@ -101,27 +111,27 @@ include 'header.php';
             </div><br>
 
             <center>
-                    <div>
-                        <select class="form-control" id="filterstatus" style="width: 60%; height:40px; font-size: 12pt;">
-                            <option value="">Lihat berdasarkan status</option>
-                            <option value="PICKREQ">PICKREQ</option>
-                            <option value="PICK">PICK</option>
-                            <option value="ON TRANSIT">ON TRANSIT</option>
-                            <option value="ON DELIVERY">ON DELIVERY</option>
-                            <option value="DELIVERED">DELIVERED</option>
-        
-                        </select>
-                    </div>
-                </center><br>
-                <center>
-                    <div>
-                        <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
-                            <option value="">Lihat berdasarkan service</option>
-                            <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
-                            <option value="ANDRE REGULAR">ANDRE REGULAR</option>
-                            <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
-                        </select>
-                    </div>
+                <div>
+                    <select class="form-control" id="filterstatus" style="width: 60%; height:40px; font-size: 12pt;">
+                        <option value="">Lihat berdasarkan status</option>
+                        <option value="PICKREQ">PICKREQ</option>
+                        <option value="PICK">PICK</option>
+                        <option value="ON TRANSIT">ON TRANSIT</option>
+                        <option value="ON DELIVERY">ON DELIVERY</option>
+                        <option value="DELIVERED">DELIVERED</option>
+
+                    </select>
+                </div>
+            </center><br>
+            <center>
+                <div>
+                    <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
+                        <option value="">Lihat berdasarkan service</option>
+                        <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
+                        <option value="ANDRE REGULAR">ANDRE REGULAR</option>
+                        <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
+                    </select>
+                </div>
             </center>
 
             <div class="row" style="margin-top: 20px;overflow-x: auto;">

@@ -9,6 +9,12 @@ include 'header.php';
     <title>Cek Ongkir</title>
 </head>
 
+<style>
+    .header-area {
+        background-image: url("assets/cekongkir.jpg");
+    }
+</style>
+
 <script>
     function cekongkir() {
         $.confirm({
@@ -103,7 +109,7 @@ include 'header.php';
     }
 </script>
 
-<div class="banner">
+<div class="banner" style="background-image: url('assets/cekongkir.png');">
     <div class="container">
         <h1>CEK ONGKIR</h1>
         <p>Your package, our passion</p>
