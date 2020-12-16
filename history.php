@@ -17,7 +17,7 @@ include 'header.php';
 <div class="banner">
     <div class="container">
         <h1>PICK UP HISTORY</h1>
-        <p>Express your online business!</p>
+        <p>Begin your journey with the castle of history</p>
         <a href="#content" class="button button-primary">View Pick Up History</a>
     </div>
 </div>
