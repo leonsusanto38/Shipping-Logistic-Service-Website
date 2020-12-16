@@ -72,6 +72,11 @@ include 'header.php';
 
     function passStatus(data) {
         statusafter = $(data).val();
+        //credits handrian
+        $(data).parent().parent().find("#confirm").removeAttr('disabled');
+        if ($(data).val() == "") {
+            $(data).parent().parent().find("#confirm").attr('disabled', 'disabled');
+        }
     }
 
     $(document).ready(function() {
@@ -139,7 +144,7 @@ include 'header.php';
                         str += "<option value='DELIVERED'>DELIVERED</option>";
                     }
                     str += "</select></td >";
-                    str += "<td><button id='confirm' style='font-size: 12pt;' class='btn btn-primary' onclick='updateStatus(this)' data-status-before='" + d.delivery_status + "' data-resi='" + d.resi + "'>CONFIRM</button></td>";
+                    str += "<td><button id='confirm' style='font-size: 12pt;' class='btn btn-primary' onclick='updateStatus(this)' data-status-before='" + d.delivery_status + "' data-resi='" + d.resi + "' disabled>CONFIRM</button></td>";
                     str += "</tr>";
                     num = num + 1;
                 }

@@ -63,7 +63,7 @@ if (isset($_SESSION['resi'])) {
                     action: function() {}
                 }
             },
-            content: "Selamat datang <b>" + "<?php echo $_SESSION['username']; ?>" + "</b> di Andre Cepat Express! Sekarang Anda bisa melakukan <i>Request Pick Up</i> di halaman <i>Pick Up Request</i>."
+            content: "Selamat datang <b>" + "<?php echo $_SESSION['username']; ?>" + "</b> di Andre Cepat Express! Sekarang Anda bisa melakukan <i>Request Pick Up</i> di halaman <i>Request Pick Up</i>."
         });
     }
 </script>
@@ -101,7 +101,7 @@ if (isset($_GET['status'])) {
         <div class="container" id="pickupreq">
             <div class="row justify-content-center">
                 <h3 class="title">
-                    PICK UP REQUEST
+                    REQUEST PICK UP
                 </h3>
             </div>
             <br>

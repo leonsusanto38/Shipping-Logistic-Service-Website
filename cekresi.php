@@ -37,18 +37,8 @@ include 'header.php';
                                     resi: resi
                                 },
                                 success: function(data) {
-                                    if (data == 'true') {
-                                        <?php
-                                        if (isset($_SESSION['cekresi'])) {
-                                            $resi = $_SESSION['cekresi'];
-
-                                            $cekdeliverysql = "SELECT * FROM delivery WHERE resi = ?";
-                                            $cekdeliverystmt = $pdo->prepare($cekdeliverysql);
-                                            $cekdeliverystmt->execute([$resi]);
-                                            $cekdelivery = $cekdeliverystmt->fetch();
-                                        }
-                                        ?>
-                                        $.alert("<center><table class='table table-bordered'><tr><td>Nomor Resi</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['resi']; ?>" + "</td></tr><tr><td>Status</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['delivery_status']; ?>" + "</td></tr><tr><td>Service</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['delivery_type']; ?>" + "</td></tr><tr><td>Dikirim tanggal</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['delivery_date']; ?>" + "</td></tr><tr><td>Dikirim oleh</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['sender_name']; ?>" + ", " + "<?php echo $cekdelivery['sender_origin_city']; ?>" + "</td></tr><tr><td>Dikirim ke</td><td style='font-weight: bold;'>" + "<?php echo $cekdelivery['receiver_name']; ?>" + ", " + "<?php echo $cekdelivery['receiver_origin_city']; ?>" + "</td></tr></table></center>");
+                                    if (data['resi'] != undefined) {
+                                        $.alert("<center><table class='table table-bordered'><tr><td>Nomor Resi</td><td style='font-weight: bold;'>" + data['resi'] + "</td></tr><tr><td>Status</td><td style='font-weight: bold;'>" + data['delivery_status'] + "</td></tr><tr><td>Service</td><td style='font-weight: bold;'>" + data['delivery_type'] + "</td></tr><tr><td>Dikirim tanggal</td><td style='font-weight: bold;'>" + data['delivery_date'] + "</td></tr><tr><td>Dikirim oleh</td><td style='font-weight: bold;'>" + data['sender_name'] + ", " + data['sender_origin_city'] + "</td></tr><tr><td>Dikirim ke</td><td style='font-weight: bold;'>" + data['receiver_name'] + ", " + data['receiver_origin_city'] + "</td></tr></table></center>");
                                     } else {
                                         $.alert('<b style="color: red;">Nomor resi tidak ada!</b>');
                                     }

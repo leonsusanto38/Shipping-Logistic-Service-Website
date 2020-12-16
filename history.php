@@ -103,7 +103,7 @@ include 'header.php';
 <main>
     <section id="content" class="content">
 
-        <div class="container" id="aboutus">
+        <div class="container" id="history">
             <div class="row justify-content-center">
                 <h3 class="title">
                     PICK UP HISTORY
@@ -156,6 +156,10 @@ include 'header.php';
                     <h3 id="empty" style="text-align:center;"></h3>
                 </div>
             </div>
+
+            <center>
+                <a href='user.php' class='button button-primary'>Back</a><br>
+            </center>
 
         </div>
 
