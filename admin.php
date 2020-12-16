@@ -23,6 +23,12 @@ include 'header.php';
 </div>
 </header>
 
+<style>
+    .header-area {
+        background-image: url("assets/useradmin.jpg");
+    }
+</style>
+
 <script type="text/javascript">
     var statusafter;
 
@@ -107,7 +113,7 @@ include 'header.php';
                     str += "<td>" + num + "</td>";
                     str += "<td>" + d.resi + "</td>";
                     if (d.delivery_status == 'DELIVERED') {
-                        str += "<td style='font-weight: bold;'>" + d.delivery_status + "</td>";
+                        str += "<td style='font-weight: bold;  color: #fc6203;'>" + d.delivery_status + "</td>";
                     } else {
                         str += "<td>" + d.delivery_status + "</td>";
                     }
@@ -168,28 +174,28 @@ include 'header.php';
             <br>
 
             <center>
-                    <div>
-                        <select class="form-control" id="filterstatus" style="width: 60%; height:40px; font-size: 12pt;">
-                            <option value="">Lihat berdasarkan status</option>
-                            <option value="PICKREQ">PICKREQ</option>
-                            <option value="PICK">PICK</option>
-                            <option value="ON TRANSIT">ON TRANSIT</option>
-                            <option value="ON DELIVERY">ON DELIVERY</option>
-                            <option value="DELIVERED">DELIVERED</option>
-        
-                        </select>
-                    </div>
-                </center><br>
-                <center>
-                    <div>
-                        <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
-                            <option value="">Lihat berdasarkan service</option>
-                            <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
-                            <option value="ANDRE REGULAR">ANDRE REGULAR</option>
-                            <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
-                        </select>
-                    </div>
-                </center>
+                <div>
+                    <select class="form-control" id="filterstatus" style="width: 60%; height:40px; font-size: 12pt;">
+                        <option value="">Lihat berdasarkan status</option>
+                        <option value="PICKREQ">PICKREQ</option>
+                        <option value="PICK">PICK</option>
+                        <option value="ON TRANSIT">ON TRANSIT</option>
+                        <option value="ON DELIVERY">ON DELIVERY</option>
+                        <option value="DELIVERED">DELIVERED</option>
+
+                    </select>
+                </div>
+            </center><br>
+            <center>
+                <div>
+                    <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
+                        <option value="">Lihat berdasarkan service</option>
+                        <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
+                        <option value="ANDRE REGULAR">ANDRE REGULAR</option>
+                        <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
+                    </select>
+                </div>
+            </center>
 
             <div class="row" style="margin-top: 20px;overflow-x: auto;">
                 <div class="col-12">
@@ -204,7 +210,7 @@ include 'header.php';
                                 <td>Dikirim oleh</td>
                                 <td>Dikirim ke</td>
                                 <td>Lihat data</td>
-                                <td>Change Status</td>
+                                <td style="width: 15%;">Change Status</td>
                                 <td>Confirmation</td>
                             </tr>
                         </thead>
@@ -212,7 +218,6 @@ include 'header.php';
 
                         </tbody>
                     </table>
-                    <h3 id="empty" style="text-align:center;"></h3>
                 </div>
             </div>
 

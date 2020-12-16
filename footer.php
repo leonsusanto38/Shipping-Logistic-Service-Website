@@ -17,7 +17,7 @@
                     <a>Surabaya</a>
                 </p>
                 <p>
-                    <a>Jogja</a>
+                    <a>Yogyakarta</a>
                 </p>
                 <p>
                     <a>Bandung</a>
@@ -39,25 +39,19 @@
                 <h6 class="text-uppercase font-weight-bold">PAGE</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#">Home</a>
+                    <a href="index.php">Home</a>
                 </p>
                 <p>
-                    <a href="#content">About Us</a>
+                    <a href="index.php#content">About Us</a>
                 </p>
                 <p>
-                    <a href="#services">Services</a>
+                    <a href="index.php#services">Services</a>
                 </p>
                 <p>
                     <a href="cekresi.php">Cek Resi</a>
                 </p>
                 <p>
                     <a href="cekongkir.php">Cek Ongkir</a>
-                </p>
-                <p>
-                    <a href="#contactus">Contact Us</a>
-                </p>
-                <p>
-                    <a href="#">Login</a>
                 </p>
 
             </div>
@@ -92,13 +86,17 @@
                 <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fas fa-home mr-3"></i>Jl. Tomang Raya No. 11 Jakarta Barat</p>
+                    <i class="fas fa-home mr-3"></i>Jl. Tomang Raya No. 11 Jakarta Barat
+                </p>
                 <p>
-                    <i class="fas fa-envelope mr-3"></i>andrecepat@gmail.com</p>
+                    <i class="fas fa-envelope mr-3"></i>cs@andrecepat.com
+                </p>
                 <p>
-                    <i class="fas fa-phone mr-3"></i>+ 01 234 567 88</p>
+                    <i class="fas fa-phone mr-3"></i>+ 01 234 567 88
+                </p>
                 <p>
-                    <i class="fas fa-print mr-3"></i>+ 01 234 567 89</p>
+                    <i class="fas fa-print mr-3"></i>+ 01 234 567 89
+                </p>
 
             </div>
             <!-- Grid column -->
@@ -110,7 +108,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 PT Andre Cepat Express. All rights reserved.
+    <div class="footer-copyright text-center py-3"><b>© 2020 PT Andre Cepat Express. All rights reserved.</b>
     </div>
     <!-- Copyright -->
 
