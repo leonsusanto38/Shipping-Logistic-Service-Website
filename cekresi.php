@@ -83,7 +83,7 @@ include 'header.php';
 <div class="banner">
     <div class="container">
         <h1>CEK RESI</h1>
-        <p>Express your online business!</p>
+        <p>Your vision, We delivered</p>
         <button class="button button-primary" style="border: 0" onclick="cekresi()">Click Here</button>
     </div>
 </div>

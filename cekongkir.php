@@ -112,7 +112,7 @@ include 'header.php';
 <div class="banner" style="background-image: url('assets/cekongkir.png');">
     <div class="container">
         <h1>CEK ONGKIR</h1>
-        <p>Express your online business!</p>
+        <p>Your package, our passion</p>
         <button class="button button-primary" style="border: 0" onclick="cekongkir()">Click Here</button>
     </div>
 </div>

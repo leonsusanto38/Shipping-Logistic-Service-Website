@@ -12,7 +12,7 @@ include 'header.php';
 <div class="banner">
 	<div class="container">
 		<h1>ANDRECEPAT EXPRESS</h1>
-		<p>Express your online business!</p>
+		<p>Delivering happiness and needs</p>
 		<a href="#content" class="button button-primary">Learn More</a>
 	</div>
 </div>
