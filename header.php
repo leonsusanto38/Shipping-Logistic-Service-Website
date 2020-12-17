@@ -506,7 +506,7 @@ require_once 'phps/connect.php';
                 type: 'orange',
                 typeAnimated: true,
                 theme: 'modern',
-                columnClass: "col-md-5",
+                columnClass: "col-md-8",
                 buttons: {
                     confirm: {
                         text: 'LOGIN',
@@ -574,7 +574,7 @@ require_once 'phps/connect.php';
                 type: 'orange',
                 typeAnimated: true,
                 theme: 'modern',
-                columnClass: "col-md-5",
+                columnClass: "col-md-8",
                 lazyOpen: true,
                 buttons: {
                     confirm: {
@@ -584,7 +584,7 @@ require_once 'phps/connect.php';
                             var username = this.$content.find('#username').val();
                             var password = this.$content.find('#password').val();
                             var email = this.$content.find('#email').val();
-                            if (username && password) {
+                            if (username && password && email) {
                                 $.ajax({
                                     url: "phps/signup.php",
                                     method: "POST",

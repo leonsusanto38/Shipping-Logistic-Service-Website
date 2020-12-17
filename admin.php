@@ -30,11 +30,10 @@ include 'header.php';
 </style>
 
 <script type="text/javascript">
-    var statusafter;
-
     function updateStatus(data) {
         var resi = data.getAttribute("data-resi");
         var statusbefore = data.getAttribute("data-status-before");
+        var statusafter = $(data).parent().parent().find("#status").val();
         $.confirm({
             title: 'Konfirmasi Pergantian Status',
             type: 'green',
@@ -55,7 +54,6 @@ include 'header.php';
                             },
                             success: function(res) {
                                 window.location.reload();
-                                window.location.href = "admin.php#content";
                             }
                         });
                     }
@@ -71,7 +69,6 @@ include 'header.php';
     }
 
     function passStatus(data) {
-        statusafter = $(data).val();
         //credits handrian
         $(data).parent().parent().find("#confirm").removeAttr('disabled');
         if ($(data).val() == "") {
@@ -109,7 +106,6 @@ include 'header.php';
             success: function(result) {
                 var data = result;
                 var str = "";
-                var dataDiv = $("#historyTableBody");
                 var num = 1;
                 //loop dari data
                 for (var i = 0; i < data.length; i++) {
@@ -148,7 +144,7 @@ include 'header.php';
                     str += "</tr>";
                     num = num + 1;
                 }
-                dataDiv.html(str);
+                $("#historyTableBody").html(str);
                 var table = $('#historyTable').DataTable({
                     "oLanguage": {
                         "sEmptyTable": "Belum ada Pick Up Request!"
