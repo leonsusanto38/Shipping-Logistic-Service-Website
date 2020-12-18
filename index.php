@@ -193,12 +193,12 @@ include 'header.php';
 				OUR PARTNERS
 			</div>
 			<div class="row py-5">
-				<div class="col-md-2 my-auto"><img src="assets/adidas.png" style="width:60%" class="partners"></div>
-				<div class="col-md-2 my-auto"><img src="assets/tokopedia.png" style="width:60%" class="partners"></div>
-				<div class="col-md-2 my-auto"><img src="assets/shopee.png" style="width:60%" class="partners"></div>
-				<div class="col-md-2 my-auto"><img src="assets/hm.png" style="width:60%" class="partners"></div>
-				<div class="col-md-2 my-auto"><img src="assets/padang.png" style="width:60%" class="partners"></div>
-				<div class="col-md-2 my-auto"><img src="assets/panasonic.png" style="width:60%" class="partners"></div>
+				<div class="col-md-2 my-auto"><a href="https://www.adidas.co.id/en/" target="_blank"><img src="assets/adidas.png" style="width:60%" class="partners"></a></div>
+				<div class="col-md-2 my-auto"><a href="https://www.tokopedia.com/" target="_blank"><img src="assets/tokopedia.png" style="width:60%" class="partners"></a></div>
+				<div class="col-md-2 my-auto"><a href="https://shopee.co.id/" target="_blank"><img src="assets/shopee.png" style="width:60%" class="partners"></a></div>
+				<div class="col-md-2 my-auto"><a href="https://www.hm.com/" target="_blank"><img src="assets/hm.png" style="width:60%" class="partners"></a></div>
+				<div class="col-md-2 my-auto"><a href="https://www.restoransederhana.id/" target="_blank"><img src="assets/padang.png" style="width:60%" class="partners"></a></div>
+				<div class="col-md-2 my-auto"><a href="https://www.panasonic.com/id/" target="_blank"><img src="assets/panasonic.png" style="width:60%" class="partners"></a></div>
 			</div>
 		</div>
 
