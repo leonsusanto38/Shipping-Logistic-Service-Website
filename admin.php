@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-
+$_SESSION['page'] = 'admin';
 // if (!isset($_SESSION['username']) || $_SESSION['username'] != 'admin') {
 //     header("Location: index.php");
 //     exit();

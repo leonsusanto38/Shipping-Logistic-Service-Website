@@ -1,5 +1,5 @@
 <?php
-require_once 'phps/connect.php';
+include 'phps/connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,10 @@ require_once 'phps/connect.php';
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16" />
+
 
     <!-- For apple devices -->
     <!-- Bootstrap  -->

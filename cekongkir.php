@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+$_SESSION['page'] = 'cekongkir';
 ?>
 
 <!DOCTYPE html>

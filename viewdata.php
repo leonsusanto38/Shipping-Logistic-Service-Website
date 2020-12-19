@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+$_SESSION['page'] = 'viewdata';
 
 // if (!isset($_SESSION['username'])) {
 //     header("Location: index.php");
