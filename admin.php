@@ -191,9 +191,9 @@ $_SESSION['page'] = 'admin';
                 <div>
                     <select class="form-control" id="filterservice" style="width: 60%; height:40px; font-size: 12pt;">
                         <option value="">Lihat berdasarkan service</option>
-                        <option value="ANDRE EKONOMIS">ANDRE EKONOMIS</option>
-                        <option value="ANDRE REGULAR">ANDRE REGULAR</option>
-                        <option value="ANDRE HALILINTAR">ANDRE HALILINTAR</option>
+                        <option value="ANDRE EKONOMIS">ANDRE EKONOMIS &#128178;</option>
+                        <option value="ANDRE REGULAR">ANDRE REGULAR &#128666;</option>
+                        <option value="ANDRE HALILINTAR">ANDRE HALILINTAR &#x26a1;</option>
                     </select>
                 </div>
             </center>
